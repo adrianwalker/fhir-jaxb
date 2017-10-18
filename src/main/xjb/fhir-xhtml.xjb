@@ -20,10 +20,9 @@
     <!--
     Fixes:-
 
-    org.xml.sax.SAXParseException; systemId: file:../xsd/fhir-single.xsd;
-    lineNumber: 81; columnNumber: 31; A class/interface with the same name
-    "org.adrianwalker.fhir.Code" is already in use. Use a class customization to
-    resolve this conflict.
+    com.sun.istack.SAXParseException2; systemId: file:../xsd/fhir-xhtml.xsd;
+    lineNumber: 1106; columnNumber: 58; Property "Lang" is already defined. Use
+    &lt;jaxb:property> to resolve this conflict.
     -->
     <bindings node="//xs:element[@name='bdo']">
       <bindings node=".//xs:attribute[@name='lang']">
