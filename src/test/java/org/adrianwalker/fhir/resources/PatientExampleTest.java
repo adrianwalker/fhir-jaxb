@@ -42,20 +42,11 @@ public final class PatientExampleTest {
   @Test
   public void testPatientToXml() throws JAXBException {
 
-    Patient patient = new Patient();
-
-    Id id = new Id();
-    id.setValue("test");
-    patient.setId(id);
-
-    HumanName name = new HumanName();
-    String given = new String();
-    given.setValue("Adrian");
-    name.getGiven().add(given);
-    String family = new String();
-    family.setValue("Walker");
-    name.setFamily(family);
-    patient.getName().add(name);
+    Patient patient = new Patient()
+            .withId(new Id().withValue("test"))
+            .withName(new HumanName()
+                    .withGiven(new String().withValue("Adrian"))
+                    .withFamily(new String().withValue("Walker")));
 
     Assert.assertEquals(
             "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
